@@ -1,0 +1,277 @@
+@font-face {
+  font-family: "My Custom Font";
+  src: url(/Amatica_SC/AmaticaSC-Bold.ttf) format("ttf"),
+    url(/Amatica_SC/AmaticaSC-Regular.ttf) format("ttf");
+}
+
+body {
+  font-family: "My Custom Font", sans-serif;
+  color: #fdd0c4;
+  background-image: url(/images/background.png);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  direction: rtl;
+}
+main img {
+  border-radius: 20%;
+  aspect-ratio: 16 / 9;
+  height: 30vh;
+}
+.logoimg {
+  aspect-ratio: 16 / 9;
+  height: 20vh;
+  width: 60%;
+}
+hr {
+  color: #fdd0c4;
+}
+
+.woltbtn {
+  padding: 2px 8px;
+}
+.whatsappbtn {
+  padding: 0px 8px;
+}
+.tenbis {
+  border-radius: 20%;
+}
+.orderfrom {
+  text-align: left;
+}
+.enlarge-on-hover {
+  transition: all 0.5s ease; /* This will add a smooth transition effect */
+}
+
+.enlarge-on-hover:hover {
+  transform: scale(1.2); /* This will increase the size of the image by 20% */
+}
+h2 {
+  transition: all 0.5s ease; /* This will add a smooth transition effect */
+  color: #fdd0c4;
+}
+
+h2:hover {
+  transform: scale(1.2); /* This will increase the size of the image by 20% */
+  color: black;
+}
+.enlarged {
+  transition: all 1.5s ease;
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  .enlarge-on-hover {
+    transition: all 1s ease;
+    transform: scale(1);
+  }
+
+  .enlarge-on-hover.enlarged {
+    transform: scale(1.2);
+  }
+}
+
+button {
+  color: #fdd0c4;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.site-header {
+  background-color: #2a6961;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #fdd0c4;
+  transition: color 0.15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.logodiv {
+  margin: 0;
+}
+h1 {
+  margin-bottom: 0;
+}
+/*
+ * Custom translucent site header
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+.carousel {
+  width: 70%;
+  margin-top: 10vh;
+}
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+.carousel-item-next,
+.active.carousel-item-right {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev,
+.active.carousel-item-left {
+  transform: translateX(-100%);
+}
+
+a {
+  color: #fdd0c4;
+  text-decoration: none;
+}
+.covertest {
+  margin: 0;
+  padding: 0;
+}
+/* Navigation Bar */
+
+/* .navbar {
+  padding: 0 0 4.5rem;
+} */
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+.nav-link-phone {
+  text-align: right;
+}
+
+/* about sction */
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  color: #2a6961;
+  background-image: url(/images/backgroundpink.jpeg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+  text-align: center;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+.modal-content h2 {
+  color: #2a6961;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+video {
+  height: 800px;
+  width: 480px;
+}
+
+.container img {
+  height: 40vh;
+  width: 100%;
+}
+
+.social-icon {
+  font-size: 2em;
+}
+footer {
+  padding: 0;
+}
+footer div {
+  padding: 0;
+  margin: 0;
+}
+
+/* .note {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fdd0c4;
+  text-transform: uppercase;
+  transform: rotate(322deg);
+  display: inline-block;
+  float: left;
+}
+
+.display-5 {
+  display: inline-block;
+  margin: auto;
+} */
+
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 17%;
+  left: -15%;
+  transform: translateY(-50%);
+}
+
+.note {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fdd0c4;
+  text-transform: uppercase;
+  margin-right: 10px;
+  transform: rotate(322deg);
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+}
+
+.display-5 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}

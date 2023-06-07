@@ -1,0 +1,90 @@
+/* Body */
+body {
+  font-family: "My Custom Font", sans-serif;
+  color: #fdd0c4;
+  background-image: url(/images/background.png);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Form */
+form {
+  margin-bottom: 50px;
+}
+
+/* Form Fields */
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+/* Notes */
+#notes {
+  height: 100px;
+}
+
+/* Order Items */
+.order-items {
+  margin-bottom: 50px;
+}
+
+.cart-item {
+  margin-bottom: 20px;
+}
+
+.cart-item h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cart-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-item li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.btn-primary {
+  background-color: #fdd0c4;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff9b8a;
+}
+.price {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff9b8a;
+  padding: 5px 10px;
+  border: 2px solid #fdd0c4;
+  border-radius: 5px;
+}

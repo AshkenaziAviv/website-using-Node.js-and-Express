@@ -1,0 +1,356 @@
+/* body {
+  background-color: #fdd0c4;
+} */
+
+@font-face {
+  font-family: "My Custom Font";
+  src: url(/Amatica_SC/AmaticaSC-Bold.ttf) format("ttf"),
+    url(/Amatica_SC/AmaticaSC-Regular.ttf) format("ttf");
+}
+
+body {
+  font-family: "My Custom Font", sans-serif;
+  color: #2a6961;
+  background-image: url(/images/backgroundpink.jpeg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  /* direction: rtl; */
+}
+.card {
+  background-color: transparent;
+  border-color: #2a6961; /* set the border color to red */
+  border-width: 4px; /* set the border width to 4 pixels */
+  border-radius: 0%;
+  /* overflow: hidden; */
+}
+img {
+  border-radius: 0%;
+  /* max-width: 100%; 
+  max-height: 100%;  */
+}
+
+.row {
+  direction: rtl;
+  text-align: right;
+  display: flex;
+}
+p {
+  margin: 0;
+  text-align: right;
+}
+.footerNote {
+  direction: rtl;
+  text-align: right;
+}
+
+/* img {
+  height: 70%;
+  width: 70%;
+} */
+
+.logoimg {
+  margin: 0%;
+  height: 10%;
+  width: 30%;
+}
+
+.breadimg {
+  height: 64.2%;
+}
+.card-img-top {
+  transition: all 0.5s ease; /* This will add a smooth transition effect */
+}
+
+.card-img-top:hover {
+  transform: scale(1.2); /* This will increase the size of the image by 20% */
+}
+
+a {
+  color: #2a6961;
+  text-decoration: none;
+}
+.covertest {
+  margin: 0;
+  padding: 0;
+}
+/* Navigation Bar */
+
+.navbar {
+  direction: rtl;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  text-align: right;
+}
+.nav-link-phone {
+  text-align: right;
+}
+
+/* about sction */
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  color: #fdd0c4;
+  background-image: url(/images/background.png);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+  text-align: center;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+.modal-content h2 {
+  color: #fdd0c4;
+}
+.modal-content p {
+  text-align: center;
+}
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  max-height: 0; /* set the initial maximum height of the dropdown to 0 */
+  overflow-y: hidden; /* hide the vertical scrollbar */
+  background-image: url(/images/background.png);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+  transition: all 0.3s ease-out; /* add a transition effect to all properties */
+  transform-origin: top; /* set the transform origin to the top */
+}
+
+.show .dropdown-menu {
+  max-height: 200px; /* set the final maximum height of the dropdown to 200px */
+  overflow-y: auto; /* add a vertical scrollbar when necessary */
+}
+
+.dropdown-menu li {
+  opacity: 0; /* set the initial opacity of each item to 0 */
+  transform: translateY(-10px); /* move each item 10px up */
+  transition: all 0.3s ease-out; /* add a transition effect to all properties */
+}
+
+.show .dropdown-menu li {
+  opacity: 1; /* set the final opacity of each item to 1 */
+  transform: translateY(0); /* move each item back to its original position */
+}
+
+.dropdown-item {
+  padding: 5px; /* add some padding to each item */
+  color: #fdd0c4;
+  text-align: right;
+}
+.dropdown-item-clicked {
+  background-color: white;
+  color: #000;
+}
+
+.addToCart:hover {
+  background-color: #2a6961;
+}
+
+.confirmation-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ddd;
+  z-index: 9999;
+}
+
+.error-message {
+  color: red;
+  font-size: small;
+  display: flex;
+  margin-right: 10px;
+}
+/*  */
+/* Show Cart Button */
+.show-cart-btn {
+  position: fixed;
+  direction: ltr;
+  top: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  z-index: 9999;
+}
+
+/* Cart Modal */
+
+.cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
+.cart-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.close-cart-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-cart-btn:hover {
+  color: #ff5a5f;
+}
+
+.cart-items {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.item-product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-product-list li {
+  font-size: 1rem;
+  color: #555;
+}
+
+.item-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  color: #ff5a5f;
+}
+
+.remove-btn {
+  margin-right: 5px;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  /* background-color: #ff5a5f; */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.row .addToCart {
+  text-align: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order Details</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="css/Checkout.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>סיכום הזמנה</h2>
+      <p>
+        שלום וברכה, תודה רבה על הזמנתכם במאפיית גבריאל! אנו מקווים שזה היה חוויה
+        טעימה ומעוררת חשק. אנחנו מאושרים על ההזמנה שלכם ומצפים לשמוע מכם שוב
+        בקרוב.
+      </p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <h3>פרטי הזמנה</h3>
+          <p>
+            <strong>איסוף או משלוח :</strong> <%=
+            orderDetails.order.pickupDelivery %>
+          </p>
+          <p><strong>תאריך :</strong> <%= orderDetails.order.orderDate %></p>
+          <p><strong>לתאריך :</strong> <%= orderDetails.order.toDate %></p>
+          <p><strong>הערות :</strong> <%= orderDetails.order.notes %></p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3>פרטי המשלוח</h3>
+          <p><strong>כתובת :</strong> <%= orderDetails.delivery.address %></p>
+          <p><strong>מספר :</strong> <%= orderDetails.delivery.city %></p>
+          <p><strong>עיר :</strong> <%= orderDetails.delivery.state %></p>
+          <p><strong>קומה :</strong> <%= orderDetails.delivery.zipCode %></p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3>פרטי הלקוח</h3>
+          <p><strong>שם פרטי :</strong> <%= orderDetails.customer.name %></p>
+          <p><strong>אימייל :</strong> <%= orderDetails.customer.email %></p>
+          <p>
+            <strong>מספר פלאפון :</strong> <%= orderDetails.customer.phone %>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>רשימת מוצרים</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>שם</th>
+                <th>פרטים</th>
+                <th>מחיר</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% orderDetails.order.items.forEach(function(item) { %>
+              <tr>
+                <td><%= item.boxName %></td>
+                <td><%= item.boxProducta %></td>
+                <td><%= item.price %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          קווים שתהנו ממוצרינו המיוחדים שאנו מכינים באהבה ובקפידה רבה כדי להבטיח
+          לכם את הטעם הטוב ביותר. תודה רבה שוב על הזמנתכם ושנה טובה! צוות מאפיית
+          גבריאל.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>מחיר כולל</h3>
+            <p><strong>מחיר :</strong> <%= orderDetails.order.total %></p>
+          </div>
+        </div>
+      </div>
+      <form id="homeForm" action="/home" method="get">
+        <button type="submit" class="btn btn-primary">לדף הבית</button>
+      </form>
+    </div>
+  </body>
+</html>

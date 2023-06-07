@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    /> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+    <link href="css/menu.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="https://kit.fontawesome.com/e88a9de5d5.js" crossorigin="anonymous"></script>
+
+    <title>Bakery Menu</title>
+  </head>
+  <body>
+    <header class="site-header sticky-top py-1">
+      <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top">
+          <!-- <a class="navbar-brand" href="#">Gabriel</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <form id="homeForm" action="/home" method="post">
+                  <a class="nav-link" href="#" onclick="document.getElementById('homeForm').submit(); return false;">מסך הבית</a>
+              </form>              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="about-link">כאן תמצאו אותנו</a>
+              </li>
+              <li class="nav-item">
+                <form id="myForm" action="/gabrielStory" method="post">
+                    <a class="nav-link" href="#" onclick="document.getElementById('myForm').submit(); return false;">הסיפור שלנו</a>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-phone" href="https://api.whatsapp.com/send/?phone=972505337788&text&type=phone_number&app_absent=0">                        
+                  <button class="btn btn-outline-light whatsappbtn" type="submit">
+                  להזמנות - 050-533-7788
+                  <img
+                class="whatsappimg"
+                src="images/whatsapp_logo.original-removebg-preview.png"
+                alt=""
+                width="36px"
+                height="36px"
+              />
+                </button></a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-phone" href="https://wolt.com/he/isr/tel-aviv/restaurant/gabriel">                        
+                    <button class="woltbtn btn btn-outline-light" type="submit">
+                    להזמנות ב-             <img
+                    class="woltimg"
+                    src="images/Wolt-app-icon-2019.png"
+                    alt=""
+                    width="32px"
+                    height="32px"
+                  />
+                  </button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-phone" href="https://www.10bis.co.il/next/restaurants/menu/delivery/38818/%D7%92%D7%91%D7%A8%D7%99%D7%90%D7%9C-%D7%A4%D7%98%D7%99%D7%A1%D7%A8%D7%99">                        
+                  <button class="woltbtn btn btn-outline-light" type="submit">
+                  להזמנות ב-             <img
+                  class="tenbis"
+                  src="images/tenbisicon.png"
+                  alt=""
+                  width="32px"
+                  height="32px"
+                />
+                </button></a>
+          </li>
+            </ul>
+          </div>
+        </nav>          
+  </header>
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>קונדיטוריית גבריאל</h2>
+      <p><strong>מיקום</strong><br> רחוב הלהב 13, חולון, ישראל</p>
+      <p><strong>אימייל</strong><br> avivaviv11211@gmail.com</p>
+      <p><strong>טלפון</strong><br> 0505337788</p>
+      <p><strong>שעות פתיחה</strong><br> ימים א'-ו', 7:00-19:00</p>
+      <p><strong>תכונות נגישות</strong></p>
+        <p>כניסה נגישה | שירותים נגישים | חנייה לאנשים עם מוגבלויות בקרבת מקום | ריהוט נגיש | רצף נגיש</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.178056498653!2d34.80605952392796!3d32.01029017399349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b595b199c78f%3A0xbcad219ce133b548!2zR2FicmllbCDXkteR16jXmdeQ15w!5e0!3m2!1siw!2sil!4v1681814431142!5m2!1siw!2sil" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+    </div>
+  </div>
+    <div class="container my-5">
+      <h1 class="text-center">
+        <img
+          class="logoimg mb-4"
+          src="images/green_logo-removebg-preview.png"
+          alt=""
+          width="250"
+          height="180"
+        />
+      </h1>
+      <!-- cart modal -->
+      <div class="cart-modal">
+        <div class="cart-modal-content">
+          <div class="cart-header">
+            <h4 class="cart-title">Your Cart</h4>
+            <button class="close-cart-btn"><i class="fas fa-times"></i></button>
+          </div>
+          <% if (orderList.length > 0) { %>
+          <div class="cart-items">
+            <% for (var i = 0; i < orderList.length; i++) { %>
+              <div class="cart-item">
+                <h6><%= orderList[i].boxName.split('').reverse().join('') %></h6>
+                <ul>
+                  <% for (var j = 0; j < orderList[i].boxProducta.length; j++) { %>
+                    <li><%= orderList[i].boxProducta[j].split('').reverse().join('') %></li>
+                  <% } %>
+                </ul>
+              </div>
+            <% } %>
+          </div>
+          <% } else { %>
+          <p>Your cart is empty.</p>
+          <% } %>
+          <div class="cart-footer">
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <!-- end cart modal -->
+      <hr />
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img src="images/-מגש קראנץ.jpg" class="card-img-top" alt="Bread" />
+            <div class="card-body">
+              <h5 class="card-title">מגש עוגות קראנץ׳ 
+            </h5>
+            <input type="hidden" name="boxName" value="מגש עוגות קראנץ׳">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ שוקולד">קראנץ שוקולד</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ חלבה שוקולד">קראנץ חלבה שוקולד</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ חלבה פסטוק">קראנץ חלבה פסטוק</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ גבינה ריקוטה">קראנץ גבינה ריקוטה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ נוטלה">קראנץ נוטלה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנץ שקדים">קראנץ שקדים</label>
+                  </div>
+                </div>
+                  <p>ניתן לבחור מאותו סוג ללא הגבלה.</p>
+                  <p>3 יחידות במארז </p>             
+                </p>
+              <h6 class="text-muted price">Price: 150₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit" onclick="confirmAddToCart()">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img
+              src="images/-מג מיקס מלוחים.jpg"
+              class="card-img-top"
+              alt="Cake"
+            />
+            <div class="card-body">
+              <h5 class="card-title">מגש מאפים מלוחים :</h5>
+              <input type="hidden" name="boxName" value="מגש מאפים מלוכים">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס תפוח אדמה">בורקס תפוח אדמה</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס גבינה משולש">בורקס גבינה משולש</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקיטס">בורקיטס</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס פטריות מיני">בורקס פטריות מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס תפוח אדמה ופטריות מיני">בורקס תפוח אדמה ופטריות מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס גבינה ותרד מיני">בורקס גבינה ותרד מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בורקס פיצה מיני">בורקס פיצה מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פילו גבינה ותרד">פילו גבינה ותרד</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="מרובע קשקבל">מרובע קשקבל</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בויוס גבינה מיני">בויוס גבינה מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בריוש פטריות / גבינה ותרד">בריוש פטריות / גבינה ותרד</label>
+                  </div>
+              </div>
+                  <p>ניתן לבחור עד 6 סוגים</p>
+                  <p>מגיע 40 יחידות במארז</p>
+              </p>
+              <h6 class="text-muted">Price: 140₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+
+          <div class="card mb-3">
+            <img
+              src="images/-מגש מיקס מוקים.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">מגש מאפים מתוקים :</h5>
+              <input type="hidden" name="boxName" value="מגש מאפים מתוקים">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="גבינית מיני">גבינית מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="קוראסון חמאה מיני">קוראסון חמאה מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="רוגעלך מיני">רוגעלך מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="קוראסון שוקולד מיני">קוראסון שוקולד מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="קוראסון שקדים מיני">קוראסון שקדים מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="קוראסון קינמון מיני">קוראסון קינמון מיני</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בריוש פטיסייר פירות יער">בריוש פטיסייר פירות יער</label>
+                  </div>
+              </div>              
+                  <p>ניתן לבחור עד 5 סוגים.</p>
+                  <p>מגיע 50 יחידות במארז</p>
+              </p>
+              <h6 class="text-muted">Price: 150₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img
+              src="images/-מגש מיקס פקמן.jpg"
+              class="card-img-top"
+              alt="Bread"
+            />
+            <div class="card-body">
+              <h5 class="card-title">מגש לחמניות ביס פקמן</h5>
+              <input type="hidden" name="boxName" value="מגש לחמניות ביס פקמן">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="חביתה">חביתה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="יווני">יווני</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="טבעוני">טבעוני</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="גאודה">גאודה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="סלט ביצים">סלט ביצים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="טונה">טונה</label>
+                  </div>
+                </div>                
+                  <p>הבחירה חופשית</p>
+                  <p>מגיע 16 יחידות במארז</p>            
+                </p>
+              <h6 class="text-muted">Price: 190₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img src="images/-מגש מתוקים.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">מגש פאי אישי קטן / גדול</h5>
+              <input type="hidden" name="boxName" value="מגש פאי אישי">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי פקאן">פאי פקאן</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי לימון">פאי לימון</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי תפוחים">פאי תפוחים</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי טופי">פאי טופי</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="גבינה פירורים">גבינה פירורים</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="קוקילידה בראוניז">קוקילידה בראוניז</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי אגסים">פאי אגסים</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי תותים">פאי תותים</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פאי פיסטוק ודובדבני אמרנה">פאי פיסטוק ודובדבני אמרנה</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="טורבו אגוזי לוז שוקולד">טורבו אגוזי לוז שוקולד</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="סופלה שוקולד">סופלה שוקולד</label>
+                  </div>
+              </div>
+                  <p>6 יחידות במארז קטן 
+                    *גדול - 12 יחידות</p>
+                  <p>הכל על בסיס חמאה </p>               
+                </p>
+              <h6 class="text-muted">Price: מגש קטן  - 150₪
+                מגש גדול - 280₪</h6>
+                <button class="btn btn-outline-secondary addToCart" type="submit">
+                  Add to Cart <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img
+              src="images/-מגש קישים.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">מגש קישים</h5>
+              <input type="hidden" name="boxName" value="מגש קישים">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש בטטה">קיש בטטה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש פטריות">קיש פטריות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש בצל">קיש בצל</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש תרד">קיש תרד</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש בולגרית עגבניות">קיש בולגרית עגבניות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קיש ברוקולי">קיש ברוקולי</label>
+                  </div>
+                </div>                
+                  <p>ניתן לבחור עד 6 סוגים.</p>
+                  <p>מגיע 6 יחידות במארז</p>           
+                </p>
+              <h6 class="text-muted">Price: 170₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img src="images/-מגש שיש.jpg" class="card-img-top" alt="Bread" />
+            <div class="card-body">
+              <h5 class="card-title">מגש עוגות בחושות שיש</h5>
+              <input type="hidden" name="boxName" value="מגש עוגות בחושות שיש">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="סלק סליאן (פרווה)">סלק סליאן (פרווה)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="שוקולד (חלבי)">שוקולד (חלבי)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="שיש נוטלה (חלבי)">שיש נוטלה (חלבי)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="תפוז לוז (פרווה)">תפוז לוז (פרווה)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="שזיף (חלבי)">שזיף (חלבי)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="גזר (פרווה)">גזר (פרווה)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="בננה שוקולד (טבעוני)">בננה שוקולד (טבעוני)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פסטוק שוקולד (טבעוני)">פסטוק שוקולד (טבעוני)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="פרג אפרסק (פרווה)">פרג אפרסק (פרווה)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="לימון אוכמניות (חלבי)">לימון אוכמניות (חלבי)</label>
+                      <label class="dropdown-item"><input type="checkbox" name="item" value="שוקולד תפוז (חלבי)">שוקולד תפוז (חלבי)</label>
+                  </div>
+              </div>                          
+                  <p>הבחירה חופשית</p>
+                  <p>מגיע 3 יחידות במארז</p> 
+                </p>
+              <h6 class="text-muted">Price: 140₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img src="images/-מקרונים.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">מארז מקרונים</h5>
+              <input type="hidden" name="boxName" value="מגש מקרונים">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="וניל">וניל</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קרמל מלוח">קרמל מלוח</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="שוקולד">שוקולד</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="פטל">פטל</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="פסטוק">פסטוק</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="לימונענע">לימונענע</label>
+                  </div>
+                </div>                
+                  <p>הבחירה חופשית</p>
+                  <p>מגיע 9 יחידות במארז</p>           
+                </p>
+              <h6 class="text-muted">Price: 40₪</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <form id="addToCart" action="/addToCart" method="post">
+          <div class="card mb-3">
+            <img src="images/עוגיות יבשות.jpg" class="card-img-top" alt="Pastry" />
+            <div class="card-body">
+              <h5 class="card-title">עוגיות יבשות</h5>
+              <input type="hidden" name="boxName" value="עוגיות יבשות">
+              <p class="card-text">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="גרנולה צימוקים">גרנולה צימוקים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="סבלה לוז ללא סוכר">סבלה לוז ללא סוכר</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנציות">קראנציות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="בישקוטי ללא סוכר">בישקוטי ללא סוכר</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="סבא שוקולד">סבא שוקולד</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קפה ואגוזים">קפה ואגוזים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="מלוחות פרג">מלוחות פרג</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="מלוחות עגבניות מיובשות">מלוחות עגבניות מיובשות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="נגיעות שקדים ללא סוכר">נגיעות שקדים ללא סוכר</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="שוקולד ציפס">שוקולד ציפס</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="חמאה סבתא">חמאה סבתא</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="מרקש">מרקש</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנציות פירות יבשים">קראנציות פירות יבשים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="שלגיות קוואנטרו">שלגיות קוואנטרו</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קוביות שקדים">קוביות שקדים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="חמאת בוטנים שוקולד ציפס טבעוני">חמאת בוטנים שוקולד ציפס טבעוני</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קראנציות שוקולד בננה טבעוני">קראנציות שוקולד בננה טבעוני</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="גרנולה חמוציות">גרנולה חמוציות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="מלוחות שומשום">מלוחות שומשום</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="גרנולה ללא סוכר">גרנולה ללא סוכר</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="נגיעות שקדים">נגיעות שקדים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="סבלה שקדים">סבלה שקדים</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="קוביות שקדים ללא סוכר">קוביות שקדים ללא סוכר</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="חלבה">חלבה</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="שוקובלוז">שוקובלוז</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="אלפחורס">אלפחורס</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="לבבות ריבת תות">לבבות ריבת תות</label>
+                    <label class="dropdown-item"><input type="checkbox" name="item" value="פיננסייר - שקדים טחונים עם וניל">פיננסייר - שקדים טחונים עם וניל</label>
+                  </div>
+                </div>
+                  <p>הבחירה חופשית</p>
+                  <p>קופסה המכילה סוג אחד לבחירה</p>               </p>
+              <h6 class="text-muted">Price: 39₪ לכל סוג</h6>
+              <button class="btn btn-outline-secondary addToCart" type="submit">
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

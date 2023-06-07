@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="HE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <title>Checkout Page</title>
+    <link href="css/Checkout.css" rel="stylesheet" />
+    <script src="js/twilio.js"></script>
+    <script src="js/checkout.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Checkout Page</h1>
+      <form id="homeForm" action="/addToCart" method="get">
+        <button type="submit" class="btn btn-primary">חזרה לתפריט</button>
+      </form>
+      <form id="submit" action="/submit" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstName">שם פרטי</label>
+            <input
+              type="text"
+              class="form-control"
+              name="firstName"
+              id="firstName"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastName">שם משפחה</label>
+            <input
+              type="text"
+              class="form-control"
+              name="lastName"
+              id="lastName"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="idNumber">תעודת זהות</label>
+            <input
+              type="text"
+              class="form-control"
+              name="idNumber"
+              id="idNumber"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phoneNumber">מספר פלאפון</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="phoneNumber"
+              id="phoneNumber"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="toDate">הזמנה לתאריך</label>
+            <input
+              type="date"
+              class="form-control"
+              name="toDate"
+              id="toDate"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="notes">הערות</label>
+          <textarea
+            class="form-control"
+            name="notes"
+            id="notes"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pickupDelivery">איסוף עצמי או משלוח ?</label>
+          <select
+            class="form-control"
+            name="pickupDelivery"
+            id="pickupDelivery"
+            required
+          >
+            <option value="">Select one</option>
+            <option value="pickup">Pick-up</option>
+            <option value="delivery">Delivery</option>
+          </select>
+          <br />
+          <div class="form-row" id="addressInputsContainer"></div>
+        </div>
+
+        <h2>פרטי ההזמנה :</h2>
+        <div class="order-items">
+          <div class="row">
+            <% var totalCost = 0; %> <% for (var i = 0; i < orderList.length;
+            i++) { %> <% var price = parseFloat(orderList[i].price); %> <%
+            totalCost += price; %>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="cart-item">
+                <h6><%= orderList[i].boxName %></h6>
+                <ul>
+                  <% for (var j = 0; j < orderList[i].boxProducta.length; j++) {
+                  %>
+                  <li><%= orderList[i].boxProducta[j] %></li>
+                  <% } %>
+                </ul>
+                <p class="price">מחיר : <%= orderList[i].price %></p>
+              </div>
+            </div>
+            <% } %>
+            <div class="col-lg-12">
+              <p class="price">עלות ההזמנה : <%= totalCost.toFixed(2) %></p>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">אישור ההזמנה</button>
+      </form>
+      <form id="homeForm" action="/addToCart" method="get">
+        <button type="submit" class="btn btn-primary">חזרה לתפריט</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="path/to/bootstrap.js"></script>
+  </body>
+</html>

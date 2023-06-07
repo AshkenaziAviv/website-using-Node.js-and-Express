@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    /> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+    <link href="css/menu.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/e88a9de5d5.js" crossorigin="anonymous"></script>
+
+
+    <title>Bakery Menu</title>
+  </head>
+  <body>
+    <header class="site-header sticky-top py-1">
+      <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top">
+          <!-- <a class="navbar-brand" href="#">Gabriel</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <form id="homeForm" action="/home" method="post">
+                  <a class="nav-link" href="#" onclick="document.getElementById('homeForm').submit(); return false;">מסך הבית</a>
+              </form>              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="about-link">כאן תמצאו אותנו</a>
+              </li>
+              <li class="nav-item">
+                <form id="myForm" action="/gabrielStory" method="post">
+                    <a class="nav-link" href="#" onclick="document.getElementById('myForm').submit(); return false;">הסיפור שלנו</a>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-phone" href="https://api.whatsapp.com/send/?phone=972505337788&text&type=phone_number&app_absent=0">                        
+                  <button class="btn btn-outline-light whatsappbtn" type="submit">
+                  להזמנות - 050-533-7788
+                  <img
+                class="whatsappimg"
+                src="images/whatsapp_logo.original-removebg-preview.png"
+                alt=""
+                width="36px"
+                height="36px"
+              />
+                </button></a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-phone" href="https://wolt.com/he/isr/tel-aviv/restaurant/gabriel">                        
+                    <button class="woltbtn btn btn-outline-light" type="submit">
+                    להזמנות ב-             <img
+                    class="woltimg"
+                    src="images/Wolt-app-icon-2019.png"
+                    alt=""
+                    width="32px"
+                    height="32px"
+                  />
+                  </button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-phone" href="https://www.10bis.co.il/next/restaurants/menu/delivery/38818/%D7%92%D7%91%D7%A8%D7%99%D7%90%D7%9C-%D7%A4%D7%98%D7%99%D7%A1%D7%A8%D7%99">                        
+                  <button class="woltbtn btn btn-outline-light" type="submit">
+                  להזמנות ב-             <img
+                  class="tenbis"
+                  src="images/tenbisicon.png"
+                  alt=""
+                  width="32px"
+                  height="32px"
+                />
+                </button></a>
+          </li>
+            </ul>
+          </div>
+        </nav>          
+  </header>
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>קונדיטוריית גבריאל</h2>
+      <p><strong>מיקום</strong><br> רחוב הלהב 13, חולון, ישראל</p>
+      <p><strong>אימייל</strong><br> avivaviv11211@gmail.com</p>
+      <p><strong>טלפון</strong><br> 0505337788</p>
+      <p><strong>שעות פתיחה</strong><br> ימים א'-ו', 7:00-19:00</p>
+      <p><strong>תכונות נגישות</strong></p>
+        <p>כניסה נגישה | שירותים נגישים | חנייה לאנשים עם מוגבלויות בקרבת מקום | ריהוט נגיש | רצף נגיש</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.178056498653!2d34.80605952392796!3d32.01029017399349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b595b199c78f%3A0xbcad219ce133b548!2zR2FicmllbCDXkteR16jXmdeQ15w!5e0!3m2!1siw!2sil!4v1681814431142!5m2!1siw!2sil" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+    </div>
+  </div>
+    <div class="container my-5">
+      <h1 class="text-center">
+        <img
+          class="logoimg mb-4"
+          src="images/green_logo-removebg-preview.png"
+          alt=""
+          width="250"
+          height="180"
+        />
+      </h1>
+      <hr />
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-כריך איטלקי.jpg" class="card-img-top" alt="Bread" />
+            <div class="card-body">
+              <h5 class="card-title">כריך איטלקי
+            </h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ממרח פסטו, עגבניה , פרוסות מוצרלה , עלי בזיליקום טריים , בלסמי מצומצם</p>            
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 28₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-כריך ארטישוק אלה רומנה.jpg"
+              class="card-img-top"
+              alt="Cake"
+            />
+            <div class="card-body">
+              <h5 class="card-title">אלה רומנה ירושלמי</h5>
+              <p class="card-text">
+                <hr>                  
+                  <p>ממרח פסטו , גבינת גאודה , עלי רוקט , ארטישוק אלה רומנה , בלסמי מצומצם.
+                    מוגש בבייגלה ירושלמי ארוך</p>
+              </p>
+              <br>
+              <h6 class="text-muted">Price: 26₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-כריך סביח.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פרנה סביח</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>טחינה , חציל ,עגבניה ,ביצה קשה , עשבי תיבול</p>
+              </p>
+              <br>
+              <h6 class="text-muted">Price: 28₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-כריך שקשוקה.jpg"
+              class="card-img-top"
+              alt="Bread"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פרנה שקשוקה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>טחינה , שקשוקה , עשבי תיבול</p>          
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 30₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-בגט סלמון.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">בגט סלמון</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>גבינת שמנת , פרוסות סלמון טרי , חסה לאליק , עגבניה , מלפפון</p>               
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 30₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-פראצל סנט מור.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פרצל סנט מור</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ממרח פסטו, עלי בזיליקום טריים , פרוסות סנט מור ,בצל מקורמל , בלסמי מצומצם.</p>
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 25₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-פקמן ביצים.jpg"
+              class="card-img-top"
+              alt="Bread"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פקמן סלט ביצים</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ביצים, עירית, איולי ומלפפון חמוץ</p>
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 160₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-פקמן גאודה.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">פקמן גאודה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>חמאה , פרוסות גאודה , עגבניה , מלפפון</p>               
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 16₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-פקמן חביתה.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פקמן חביתה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>גבינת שמנת , אומלט , עגבניה , מלפפון , מלפפון חמוץ</p>           
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 16₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-פקמן טונה.jpg"
+              class="card-img-top"
+              alt="Bread"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פקמן טונה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>סלט טונה , עגבניה , מלפפון , חסה לאליק.</p>            
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 16₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-פינוקים גבינה.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">פינוקים גבינה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ביצה קשה, עגבניה , מלפפון חמוץ ,מלפפון</p>
+                  <p>מוגש עם טחינה בצד</p>               
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 18₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-פינוקים תפוח אדמה.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">פינוקים תפוח אדמה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ביצה קשה, עגבניה , מלפפון חמוץ ,מלפפון</p>
+                  <p>מוגש עם טחינה בצד</p>           
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 18₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-קוראסון חביתה.jpg"
+              class="card-img-top"
+              alt="Bread"
+            />
+            <div class="card-body">
+              <h5 class="card-title">קוראסון חביתה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>גבינת שמנת , חסה לאליק , עגבניה , מלפפון , חביתה</p>            
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 26₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-קוראסון נורבגי.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">קוראסון נורבגי</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>גבינת שמנת , פרוסות סלמון , עגבניה , חסה לאליק , מלפפון</p>               
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 28₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img
+              src="images/-קוראסון אבוקדו.jpg"
+              class="card-img-top"
+              alt="Pastry"
+            />
+            <div class="card-body">
+              <h5 class="card-title">קוראסון אבוקדו</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>אבוקדו , חסה לאליק , עגבניה , מלפפון , ביצה קשה , בצל סגול</p>           
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 26₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-מחמצת טבעוני.jpg" class="card-img-top" alt="Bread" />
+            <div class="card-body">
+              <h5 class="card-title">מחמצת טבעוני</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>ממרח פסטו , סלק אדום , בטטה , רוקט , בלסמי מצומצם</p> 
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 18₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-מחמצת טונה.jpg" class="card-img-top" alt="Cake" />
+            <div class="card-body">
+              <h5 class="card-title">מחמצת טונה</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>סלט טונה , ביצה קשה , מלפפון חמוץ , עגבניה , מלפפון</p>           
+                </p>
+                <br>
+              <h6 class="text-muted">Price: 18₪</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card mb-3">
+            <img src="images/-חממצת יוונימ.jpg" class="card-img-top" alt="Pastry" />
+            <div class="card-body">
+              <h5 class="card-title">מחמצת יווני</h5>
+              <p class="card-text">
+                  <hr>
+                  <p>תפנד זיתים , חציל , פרוסת פטה , עגבניה , מלפפון</p> 
+                  </p>
+                  <br>
+              <h6 class="text-muted">Price: 18₪</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
